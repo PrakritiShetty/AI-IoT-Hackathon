@@ -1,0 +1,58 @@
+version: '3.1'
+intents:
+- add
+- affirm
+- bot_challenge
+- delete
+- deny
+- finish
+- goodbye
+- greet
+- inform
+- inform_delete
+- view list
+entities:
+- shopping_items
+- remove_shopping_items
+- view_shopping_items
+actions:
+- action_create_shopping_list
+- action_remove_from_shopping_list
+- action_view_shopping_list
+- utter_add_to_list
+- utter_double_check
+- utter_goodbye
+- utter_greet
+- utter_remove_from_list
+slots:
+  shopping_items:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: shopping_items
+  view_shopping_items:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: view_shopping_items
+responses:
+  utter_greet:
+  - text: "Hello! Let's go to the supermarket! Add items to your list - "
+  utter_add_to_list:
+  - text: 'Adding the item .. '
+  utter_remove_from_list:
+  - text: 'Okay! Enter the item you want to remove '
+  utter_suggest:
+  - text: 'Got it! Suggestions include .. '
+  utter_double_check:
+  - text: Are you sure you want to end your list?
+  utter_finish:
+  - text: Great, Your list is complete! Meet you at the store :)
+  utter_goodbye:
+  - text: Bye! Have a nice day!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

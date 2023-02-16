@@ -1,0 +1,129 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yep
+    - yeah
+    - yea
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nah
+- intent: finish
+  examples: |
+    - cu
+    - finished
+    - completed
+    - over
+    - that's it
+    - enough
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: add
+  examples: |
+    - add
+    - insert
+    - put
+    - include
+    - add one more
+- intent: inform
+  examples: |
+    - [eggs](shopping_items)
+    - [milk](shopping_items)
+    - [wheat](shopping_items)
+    - [rice](shopping_items)
+    - add [broom](shopping_items)
+    - add [shampoo](shopping_items)
+    - add [conditioner](shopping_items)
+    - add [mat](shopping_items)
+    - insert [sugar](shopping_items)
+    - put [notebooks](shopping_items)
+    - put [pen](shopping_items)
+    - put [cheese](shopping_items)
+    - [pan](shopping_items)
+    - [eggs](shopping_items)
+- intent: inform_delete
+  examples: |
+    - remove [eggs](remove_shopping_items)
+    - delete [milk](remove_shopping_items)
+    - remove [wheat](remove_shopping_items)
+    - clear [paneer](remove_shopping_items)
+    - remove [eggs](remove_shopping_items)
+- intent: delete
+  examples: |
+    - remove
+    - delete
+    - empty
+    - empty the list
+    - refresh
+    - clear
+- intent: view list
+  examples: |
+    - show
+    - show me the entire list
+    - tell me the list
+    - show me the list
+    - read out my list
+    - read the list
+    - confirm my list
+    - read out
+- lookup: shopping_items
+  examples: |
+    - eggs
+    - milk
+    - paneer
+    - wheat
+    - bourbon
+    - wheat
+    - biryani masala
+    - chillies
+    - tomatoes
+    - ketchup
+    - udad dal
+    - masoor dal

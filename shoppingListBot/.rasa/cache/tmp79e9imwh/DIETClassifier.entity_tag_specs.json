@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-shopping_items",
+      "2": "I-shopping_items",
+      "3": "L-shopping_items",
+      "4": "U-shopping_items",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-shopping_items": 1,
+      "I-shopping_items": 2,
+      "L-shopping_items": 3,
+      "U-shopping_items": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {
+    "name": "shopping_items",
+    "pattern": "(\\beggs\\b|\\bmilk\\b|\\bpaneer\\b|\\bwheat\\b|\\bbourbon\\b|\\bwheat\\b|\\bbiryani\\ masala\\b|\\bchillies\\b|\\btomatoes\\b|\\bketchup\\b|\\budad\\ dal\\b|\\bmasoor\\ dal\\b)"
+  }
+]

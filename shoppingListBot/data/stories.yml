@@ -1,0 +1,98 @@
+version: "3.1"
+
+stories:
+
+- story: make a new list and add items
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform
+  - action: utter_add_to_list
+  - action: action_create_shopping_list
+  - intent: view list
+  - action: action_view_shopping_list
+  # - intent: delete
+  # - action: utter_remove_from_list
+  # - intent: inform_delete
+  # - action: action_remove_from_shopping_list
+  # - intent: view list
+  # - action: action_view_shopping_list
+  - intent: finish
+  # - action: utter_double_check
+  # - intent: affirm
+  - action: utter_goodbye
+
+
+
+
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+  
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform
+    entities:
+    - shopping_items: eggs
+  - slot_was_set:
+    - shopping_items: eggs
+  - action: action_create_shopping_list
+  - intent: view list
+  - action: action_view_shopping_list
+  - intent: delete
+  - action: utter_remove_from_list
+  - intent: inform_delete
+    entities:
+    - remove_shopping_items: eggs
+  - intent: view list
+  - action: action_view_shopping_list
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: affirm
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform
+    entities:
+    - shopping_items: eggs
+  - slot_was_set:
+    - shopping_items: eggs
+  - action: action_create_shopping_list
+  - intent: view list
+  - action: action_view_shopping_list
+  - intent: delete
+  - action: utter_remove_from_list
+  - intent: inform_delete
+    entities:
+    - remove_shopping_items: eggs
+  - action: action_remove_from_shopping_list
+  - intent: view list
+  - action: action_view_shopping_list
+  - intent: finish
+  - action: utter_double_check
+  - intent: affirm
+  - action: utter_goodbye
